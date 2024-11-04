@@ -1,0 +1,45 @@
+[
+    {
+        "user": "rxxuzi",
+        "repo": "asmx",
+        "lang": "C",
+        "description": "64bit Windows NASM+C Build Tool",
+        "url": "https://github.com/rxxuzi/asmx"
+    },
+    {
+        "user": "rxxuzi",
+        "repo": "antares",
+        "lang": "Go",
+        "description": " lightweight, cross-platform web drive",
+        "url": "https://github.com/rxxuzi/antares"
+    },
+    {
+        "user": "rxxuzi",
+        "repo": "luka",
+        "lang": "Python",
+        "description": "Linux Utility Kit Assistant",
+        "url": "https://github.com/rxxuzi/luka"
+    },
+    {
+        "user": "rxxuzi",
+        "repo": "asap",
+        "lang": "Scala",
+        "description": "Modern GUI-based SSH client",
+        "url": "https://github.com/rxxuzi/asap"
+    },
+    {
+        "user": "rxxuzi",
+        "repo": "eula2",
+        "lang": "Java",
+        "description": "EULA's Unique Lock Api",
+        "url": "https://github.com/rxxuzi/eula2"
+    },
+    {
+        "user": "rxxuzi",
+        "repo": "mango",
+        "lang": "C",
+        "description": "ASCII Art Generator",
+        "url": "https://github.com/rxxuzi/mango"
+    }
+]
+

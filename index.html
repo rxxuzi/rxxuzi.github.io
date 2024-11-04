@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>rxxuzi Portfolio</title>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="v1/css/design.css">
+    <link rel="stylesheet" href="v1/css/design2.css">
+</head>
+<body>
+<header>
+    <h1>rxxuzi</h1>
+    <button id="mode-toggle" aria-label="Toggle dark/light mode">
+        <svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path class="sun" d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z"></path>
+            <path class="moon" color="#ffffff" fill-rule="evenodd" d="M9.528 1.718a.75.75 0 0 1 .162.819A8.97 8.97 0 0 0 9 6a9 9 0 0 0 9 9 8.97 8.97 0 0 0 3.463-.69.75.75 0 0 1 .981.98 10.503 10.503 0 0 1-9.694 6.46c-5.799 0-10.5-4.7-10.5-10.5 0-4.368 2.667-8.112 6.46-9.694a.75.75 0 0 1 .818.162Z" clip-rule="evenodd"></path>
+        </svg>
+    </button>
+</header>
+
+<main>
+    <aside>
+        <div class="profile">
+            <img src="https://github.com/rxxuzi.png" alt="Profile" class="profile-image">
+            <h2 id="profile-name">rxxuzi</h2>
+            <p class="profile-description">Developer & Designer</p>
+            <div class="profile-stats">
+                <span>Followers: <span id="followers">19</span></span>
+                <span>Following: <span id="following">52</span></span>
+            </div>
+            <p>Public Repos: <span id="profile-repos">72</span></p>
+        </div>
+
+        <div class="social-links">
+            <h3>Social Links</h3>
+            <a href="https://x.com/rxxuzi" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="twitter" class="social-icon"></i>
+                <span>Twitter</span>
+            </a>
+            <a href="https://github.com/rxxuzi" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="github" class="social-icon"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://instagram.com/rxxuzi" class="social-link">
+                <i data-lucide="instagram" class="social-icon"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://fb.com/1xfukuda" class="social-link">
+                <i data-lucide="facebook" class="social-icon"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.linkedin.com/in/rxxuzi/" class="social-link">
+                <i data-lucide="linkedin" class="social-icon"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://youtube.com/@rxxuzi" class="social-link">
+                <i data-lucide="youtube" class="social-icon"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="https://music.apple.com/profile/rxxuzi" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="music" class="social-icon"></i>
+                <span>Apple Music</span>
+            </a>
+            <a href="https://codepen.io/rxxuzi" class="social-link" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="codepen" class="social-icon"></i>
+                <span>Codepen</span>
+            </a>
+
+            <h3>Contact Me</h3>
+            <a href="mailto:rxxuzi@gmail.com" class="social-link">
+                <i data-lucide="mail" class="social-icon"></i>
+                <span>rxxuzi@gmail.com</span>
+            </a>
+        </div>
+    </aside>
+
+    <div class="content">
+        <section class="repo-section">
+            <h2>Pinned Repositories</h2>
+            <div id="repo-list">
+                <!-- gen -->
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <h2>My Stats</h2>
+            <h3>Top Language</h3>
+            <div id="lang-grid">
+                <!-- gen -->
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="footer">
+    Copyright © 2024 rxxuzi.
+</footer>
+
+<script src="v1/js/github.js"></script>
+<script src="v1/js/script.js" defer></script>
+<script src="v1/js/mode.js"></script>
+</body>
+</html>
+

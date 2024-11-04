@@ -1,0 +1,302 @@
+/* design.css */
+:root {
+    --header-h: 60px;
+    --fg: #ffffff;
+    --bg: #101010;
+    --sub: #a0a0a0;
+    --header-bg: rgba(0, 0, 0, 0.5);
+    --card-bg: #1a1a1a;
+    --card-border: #333333;
+    --hover-bg: #2a2a2a;
+    --profile-border: 4px solid rgba(255, 255, 255, 0.5);
+
+    --transition-duration: 0.3s;
+}
+
+.light {
+    --fg: #1d1d1f;
+    --bg: #f5f5f7;
+    --sub: #56565b;
+    --header-bg: rgba(245, 245, 247, 0.8);
+    --card-bg: #ffffff;
+    --card-border: #e6e6e6;
+    --hover-bg: #e8e8e8;
+    --profile-border:  4px solid rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+    background-color: var(--bg);
+    color: var(--fg);
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: var(--header-h);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 50;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    backdrop-filter: saturate(180%) blur(20px);
+    transition: background-color var(--transition-duration) ease,
+    backdrop-filter var(--transition-duration) ease;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--header-h);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 3rem;
+}
+
+h1 {
+    font-size: 1.9rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+p {
+    font-size: 1.25rem;
+}
+
+aside {
+    width: 100%;
+}
+
+section {
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    aside {
+        width: 25%;
+    }
+
+    main {
+        flex-direction: row;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        gap: 3rem;
+    }
+}
+
+.profile {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.profile-image {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: var(--profile-border);
+    margin: 0 auto;
+    transition: transform 0.3s;
+
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.profile p {
+    color: var(--sub);
+    margin-top: 0.5rem;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--sub);
+}
+
+
+.social-links {
+    margin-top: 2rem;
+}
+
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--sub);
+    text-decoration: none;
+    transition: color 0.3s;
+    margin-bottom: 1rem;
+}
+
+.social-link:hover {color: var(--fg);}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+.content {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .content {
+        width: 75%;
+    }
+}
+
+#repo-list {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+#repo-list::-webkit-scrollbar {
+    display: none;
+}
+
+.repo-card {
+    min-width: 18.75rem;
+    height: 18.75rem;
+    border-radius: 0.6rem;
+    padding: 1.45rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: filter 0.3s, opacity 0.3s;
+    filter: brightness(1);
+    opacity: 1;
+}
+
+.repo-card:hover {
+    filter: brightness(0.8);
+    opacity: 0.9;
+}
+
+.repo-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.repo-name {
+    font-size: 1.9rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.repo-lang {
+    font-size: 1.125rem;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+}
+
+.repo-description {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#lang-grid {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+#lang-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.lang-card {
+    min-width: 12rem;
+    height: 12rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    align-items: flex-end;
+}
+
+.lang-card:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.lang-upper {
+    height: 50%;
+    display: flex;
+    padding: 0.4rem;
+}
+
+.lang-name {
+    font-size: 2.9rem;
+    font-weight: bold;
+}
+
+.lang-lower {
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.3rem;
+}
+
+.lang-rank {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    color: var(--sub);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 3rem;
+}

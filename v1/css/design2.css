@@ -1,0 +1,130 @@
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside, .content {
+        width: 100%;
+    }
+
+    .profile-image {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .repo-card {
+        min-width: 100%;
+        height: auto;
+    }
+
+    .lang-card {
+        width: 10rem;
+        height: 10rem;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header {
+        padding: 0.5rem 1rem;
+    }
+
+    main {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .social-link {
+        font-size: 0.9rem;
+    }
+
+    .repo-name {
+        font-size: 1.5rem;
+    }
+
+    .lang-name {
+        font-size: 2.2rem;
+    }
+
+    .lang-rank {
+        font-size: 1.2rem;
+    }
+}
+
+/* mode */
+
+#mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--fg);
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#mode-toggle:hover {
+    transform: scale(1.05);
+}
+
+#mode-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+#mode-toggle .sun {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+#mode-toggle .moon {
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+.light #mode-toggle .sun {
+    opacity: 0;
+}
+
+.light #mode-toggle .moon {
+    opacity: 1;
+}
+
+body:not(.light) #mode-toggle .sun {
+    opacity: 1;
+}
+
+body:not(.light) #mode-toggle .moon {
+    opacity: 0;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#mode-toggle.active svg {
+    animation: rotate 0.5s ease-in-out;
+}
